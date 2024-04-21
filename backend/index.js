@@ -110,7 +110,6 @@ app.post("/books", authenticateTokenMiddleware, upload.single('image'), async (r
 
 });
 
-
 // get all books
 app.get("/books", async (req, res) => {
   const books = await prisma.book.findMany();
